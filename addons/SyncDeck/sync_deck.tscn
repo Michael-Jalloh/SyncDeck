@@ -29,7 +29,6 @@ text = "IP:                   "
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "192.168.0.115"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -41,7 +40,6 @@ text = "User:              "
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "deck"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -53,7 +51,6 @@ text = "Source:          "
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "bin/The Last Space Warrior.x86_64"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -65,7 +62,6 @@ text = "Destination: "
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "~/Desktop/LastSpaceWarrior"
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
