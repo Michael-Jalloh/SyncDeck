@@ -16,3 +16,9 @@ In the Godot Editor create a Linux build(embed pck), then enter the IP of the St
 After the first sync to the deck, the game can be added as a non-steam game and then after every sync the game can be tested from game mode. The steam deck shouldn't be sleeping for this to work.
 
 ![Image](images/image.png)
+
+### Change logs
+1.6
+----
+- Send file in a seperate process, not blocking the main Godot process.
+- Added sound feedback.

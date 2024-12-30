@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctw1d51inismg"]
+[gd_scene load_steps=4 format=3 uid="uid://ctw1d51inismg"]
 
 [ext_resource type="Script" path="res://addons/SyncDeck/sync_deck.gd" id="1_r502y"]
+[ext_resource type="AudioStream" uid="uid://bs4bmna67w3aw" path="res://addons/SyncDeck/done.mp3" id="2_0exj8"]
+[ext_resource type="AudioStream" uid="uid://cpi8713fog1js" path="res://addons/SyncDeck/sending.mp3" id="3_liim3"]
 
 [node name="SyncDeck" type="Control"]
 layout_mode = 3
@@ -23,8 +25,9 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(99, 0)
 layout_mode = 2
-text = "IP:                   "
+text = "IP:"
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -34,8 +37,9 @@ size_flags_horizontal = 3
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(99, 0)
 layout_mode = 2
-text = "User:              "
+text = "User:"
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -45,8 +49,9 @@ size_flags_horizontal = 3
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(99, 0)
 layout_mode = 2
-text = "Source:          "
+text = "Source:"
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
@@ -56,13 +61,37 @@ size_flags_horizontal = 3
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(99, 0)
 layout_mode = 2
-text = "Destination: "
+text = "Destination:"
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(99, 0)
+layout_mode = 2
+text = "Sound:"
+
+[node name="SoundButton" type="CheckButton" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+button_pressed = true
+
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Sync To Deck"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Alarm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0exj8")
+
+[node name="Sending" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_liim3")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
