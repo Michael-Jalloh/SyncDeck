@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctw1d51inismg"]
 
-[ext_resource type="Script" path="res://addons/SyncDeck/sync_deck.gd" id="1_r502y"]
-[ext_resource type="AudioStream" uid="uid://bs4bmna67w3aw" path="res://addons/SyncDeck/done.mp3" id="2_0exj8"]
-[ext_resource type="AudioStream" uid="uid://cpi8713fog1js" path="res://addons/SyncDeck/sending.mp3" id="3_liim3"]
+[ext_resource type="Script" uid="uid://5i2cy6jdmmbo" path="res://addons/SyncDeck/sync_deck.gd" id="1_r502y"]
+[ext_resource type="AudioStream" uid="uid://brhhsdamvlgwv" path="res://addons/SyncDeck/done.mp3" id="2_0exj8"]
+[ext_resource type="AudioStream" uid="uid://drsmogt6paas0" path="res://addons/SyncDeck/sending.mp3" id="3_liim3"]
 
 [node name="SyncDeck" type="Control"]
 layout_mode = 3
@@ -32,6 +32,7 @@ text = "IP:"
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "192.168.100.11"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -44,6 +45,7 @@ text = "User:"
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "deck"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -56,6 +58,7 @@ text = "Source:"
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "/home/omega/Michael/GodotApps/the-last-space-warrior/bin/TheLastSpaceWarrior.x86_64"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -68,6 +71,7 @@ text = "Destination:"
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "/home/deck/Desktop/LastSpaceWarrior/TheLastSpaceWarrior.x86_64"
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -81,9 +85,25 @@ text = "Sound:"
 layout_mode = 2
 button_pressed = true
 
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(99, 0)
+layout_mode = 2
+text = "Debug:"
+
+[node name="DebugButton" type="CheckButton" parent="VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+button_pressed = true
+
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Sync To Deck"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Stop Sync"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

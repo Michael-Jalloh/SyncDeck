@@ -22,3 +22,8 @@ After the first sync to the deck, the game can be added as a non-steam game and 
 ----
 - Send file in a seperate process, not blocking the main Godot process.
 - Added sound feedback.
+
+1.7
+----
+- Change from scp ot rsync
+- Added Debug for 
