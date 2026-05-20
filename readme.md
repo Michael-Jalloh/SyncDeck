@@ -3,7 +3,7 @@
 
 ## The new addon uses rsync, So please install it.
 
-This is a Godot 4.x plugin that enables the Godot Editor to send build games to the Steam deck. Tested on MacOS and Linux, as the **scp** application is needed.
+This is a Godot 4.x plugin that enables the Godot Editor to send build games to the Steam deck. Tested on Linux, as the **rsync** application is needed. Should work on MacOS and Windows if rsync is installed
 
 ## Setup
 1) Setup Password.
@@ -27,5 +27,5 @@ After the first sync to the deck, the game can be added as a non-steam game and 
 
 1.7
 ----
-- Change from scp ot rsync
+- Change from scp to rsync
 - Added Debug for 
